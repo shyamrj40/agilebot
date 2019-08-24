@@ -1,0 +1,18 @@
+<div class=" mat-elevation-z6 app-navbar">
+  <nav class="docs-nav-header">
+    <mat-icon aria-hidden="false" (click)="toggleSideNav($event)" aria-label="Example home icon">reorder</mat-icon>
+  </nav>
+</div>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    <mat-list>
+      <mat-list-item> Pepper </mat-list-item>
+      <mat-list-item> Salt </mat-list-item>
+      <mat-list-item> Paprika </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
