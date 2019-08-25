@@ -5,31 +5,26 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './agilebot/main/main.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatInputModule} from '@angular/material/input';
-import {MatCheckboxModule} from '@angular/material/checkbox';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatIconModule} from '@angular/material/icon';
-import {MatListModule} from '@angular/material/list';
-import {MatCardModule} from '@angular/material/card';
+import { NbChatModule,NbThemeModule } from '@nebular/theme';
+import { ChatComponent } from './agilebot/components/chat/chat.component';
+
+import {DemoMaterialModule} from './material-module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    MatSidenavModule,
-    MatInputModule,
-    MatCheckboxModule,
-    ReactiveFormsModule,
-    MatIconModule,
-    MatListModule,
-    MatCardModule
+    DemoMaterialModule,
+    NbChatModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

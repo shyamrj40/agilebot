@@ -1,13 +1,38 @@
 <div class=" mat-elevation-z6 app-navbar">
   <nav class="docs-nav-header">
     <mat-icon aria-hidden="false" (click)="toggleSideNav($event)" aria-label="Example home icon">reorder</mat-icon>
+    
+    <div>
+      <button mat-button [matMenuTriggerFor]="menu">Projects</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
   </nav>
 </div>
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+      <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+      </mat-card>
+      <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+      </mat-card>
     <mat-list>
-      <mat-list-item> Pepper </mat-list-item>
-      <mat-list-item> Salt </mat-list-item>
+      <mat-list-item class="active">
+        <h4 mat-line>Agile Bot</h4>
+        <p mat-line>sprint 12</p>
+      </mat-list-item>
+      <mat-list-item> Retrospection </mat-list-item>
       <mat-list-item> Paprika </mat-list-item>
     </mat-list>
   </mat-sidenav>
